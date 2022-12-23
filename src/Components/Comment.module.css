@@ -1,0 +1,85 @@
+
+.Avatar{
+    height: 3rem;
+    width: 3rem;
+    border-radius:8px;
+    background: black;
+}.comment{
+   display:flex;
+   gap: 1rem;
+   padding: 0 2.5rem;
+   background:var(--gray-800);
+}.commentBox{
+width:100%;
+}.commentContent{
+    background:var(--gray-700);
+    border-radius:9px;
+    padding: 1rem 1rem 1.56rem 1rem;
+    margin-bottom: 1.125rem;
+
+    
+}.commentContent > header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+}.commentContent time{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:0.75rem;
+    line-height: 1.6;
+    color:var(--gray-400);
+}.commentContent > header strong{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-style: normal;
+    color:var(--gray-100);
+
+}.commentContent p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-style: normal;
+    color:var(--gray-300);
+}
+
+.authorInfo{
+    display: flex;
+    flex-direction: column;
+}.deleteButton{
+    background: transparent;
+    font-size: -5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--gray-400);
+    height: 1.5rem;
+
+}.deleteButton :Hover{
+    color: var(--red-200);
+    transition:0.2s;
+}.likeButton{
+    background: transparent;
+    color: var(--gray-400);
+    border: 0;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-style: normal;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+
+}.likeButton:Hover{
+    color: var(--green-300);
+}.likeButton svg{
+    margin-right:0.75rem;
+}.likeButton span::before{
+    content:"\2022";
+    padding:0 0.25rem;
+}

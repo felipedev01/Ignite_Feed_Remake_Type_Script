@@ -1,0 +1,116 @@
+.Author{
+    display:flex;
+    gap:1rem;
+
+}
+.AuthorInfo{
+    display: flex;
+    flex-direction: column;
+    margin-top:0.4375rem;
+}.Content{
+    margin-top:1.5rem;
+    margin-bottom:3rem;
+}.Post{
+    padding:2.5rem;
+    background:var(--gray-800);
+    color:var(--gray-300);
+}
+.Post + .Post{
+        margin-top:4.5rem;
+}.Content p{
+    margin-top:1rem;
+}.Content a{
+    font-weight:bold;
+    color:var(--green-500);
+    text-decoration:none;
+
+}.Content a:Hover{
+    color:var(--green-300);
+
+}.Post > header{
+    display:flex;
+    justify-content: space-between;
+}
+.Post header time{
+    color:var(--gray-400);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
+
+}.Post span{
+    color:var(--gray-400);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
+
+}.Post strong{
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 1rem;
+     line-height: 1.6;
+}
+
+.contentForm textarea{
+      width:100%;
+      height:6rem;
+      padding:1rem 0.8125rem;
+      margin-top:1rem;
+      background:var(--gray-900);
+      color:var(--gray-300);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.4;
+      border-radius: 8px;
+      resize:none;
+      border:none;
+
+}.contentForm > strong{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.6;
+    color:var(--gray-100);
+
+}.contentForm  button{
+    width: 6.75rem;
+    height: 3rem;
+    margin-top:1rem;
+    padding: 1rem 1.5rem 0.875rem;
+    background:var(--green-500);
+    border-radius: 8px;
+    border:none;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-style: normal;
+    color: #FFFFFF;
+    cursor:pointer;
+    
+
+}.contentForm  button:not(:disabled):Hover{
+    background:var(--green-300);
+    transition:background-color 0.2s;
+}.contentForm  button:disabled{
+    cursor: not-allowed;
+    opacity:0.7;
+}
+
+
+.contentForm > footer{
+    visibility:hidden;
+    height:0;
+}.contentForm:focus-within footer{
+    visibility:visible;
+    height: 3rem;
+
+   
+}.commentList{
+    margin-top:2rem;
+}
