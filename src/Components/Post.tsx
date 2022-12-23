@@ -4,26 +4,40 @@ import ptBR from 'date-fns/locale/pt-BR'
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
 import {Comment} from '../Components/Comment'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 
-export function Post({author,content,publishedAt}){
+
+interface postProps{
+    author:{
+        authorAvatar:string;
+        authorName:string;
+        authorRole:string;
+    }
+   content:[{
+         type: 'paragraph' | 'Link';
+         content:string;
+   }]
+   publishedAt:Date;
+}
+
+export function Post({author,content,publishedAt}:postProps){
 
     const [commentList,setCommenList]=useState([
         'Post muito bacana!',
         'Mais um post muito bacana'
     ])
 
-    const [newCommentText, setNewCommentText]=useState([
+    const [newCommentText, setNewCommentText]=useState(''
 
-    ])
+    )
 
-    function handleCreateNewComment(){
+    function handleCreateNewComment(event :FormEvent){
         event.preventDefault()
         setCommenList([...commentList,newCommentText])
         setNewCommentText('')
 
     }
-    function handleCommentTextChange(){
+    function handleCommentTextChange(event :FormEvent){
         event.target.setCustomValidity('')
         setNewCommentText(event.target.value)
         console.log(newCommentText)
